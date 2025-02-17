@@ -19,3 +19,7 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+.bg-img{
+  background: url("https://images.pexels.com/photos/30412427/pexels-photo-30412427/free-photo-of-dramatic-view-of-arctic-glacier-under-brooding-skies.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load") center no-repeat ;
+  background-size: cover;
+}
