@@ -45,10 +45,11 @@ const Home = () => {
      </div>
 
       {/* Category Cards (Optional) */}
+        <h1 className="text-center text-xl font-bold">Accessroies</h1> 
       <div className=" w-[80%] mx-auto flex flex-wrap  justify-around my-6">
         {/* Uncomment and add actual cards */}
+        {/* <h1>Accresios</h1> */}
         <Card /> <Card /> <Card /> <Card />
-        {/* <h1 className="text-center text-xl font-bold">hello</h1>  */}
       </div>
              <Footer />    
     </div>
