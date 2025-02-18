@@ -11,77 +11,140 @@ const Contact = () => {
           <div className="relative w-1/2">
             <input
               type="text"
-              id="firstName"
+              id="customerName"
               className="peer w-full mt-1 p-2 border-b border-gray-900 focus:outline-none focus:border-green-500"
               placeholder=" "
             />
             <label
-              htmlFor="firstName"
+              htmlFor="customerName"
               className="absolute left-0 top-1 text-gray-700 text-sm transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-900 peer-focus:top-1 peer-focus:text-sm peer-focus:text-green-500"
             >
-              First Name
+              Customer Name
             </label>
           </div>
 
           <div className="relative w-1/2">
             <input
               type="text"
-              id="lastName"
+              id="productName"
               className="peer w-full mt-1 p-2 border-b border-gray-900 focus:outline-none focus:border-green-500"
               placeholder=" "
             />
             <label
-              htmlFor="lastName"
+              htmlFor="productName"
               className="absolute left-0 top-1 text-gray-700 text-sm transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-900 peer-focus:top-1 peer-focus:text-sm peer-focus:text-green-500"
             >
-              Last Name
-            </label>
-          </div>
-        </div>
-
-        <div className="flex justify-between space-x-4">
-          <div className="relative w-1/2">
-            <input
-              type="tel"
-              id="phone"
-              className="peer w-full mt-1 p-2 border-b border-gray-900 focus:outline-none focus:border-green-500"
-              placeholder=" "
-            />
-            <label
-              htmlFor="phone"
-              className="absolute left-0 top-1 text-gray-700 text-sm transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-900 peer-focus:top-1 peer-focus:text-sm peer-focus:text-green-500"
-            >
-              Phone Number
-            </label>
-          </div>
-
-          <div className="relative w-1/2">
-            <input
-              type="email"
-              id="email"
-              className="peer w-full mt-1 p-2 border-b border-gray-900 focus:outline-none focus:border-green-500"
-              placeholder=" "
-            />
-            <label
-              htmlFor="email"
-              className="absolute left-0 top-1 text-gray-700 text-sm transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-900 peer-focus:top-1 peer-focus:text-sm peer-focus:text-green-500"
-            >
-              Email
+              Product Name
             </label>
           </div>
         </div>
 
         <div className="relative">
-          <textarea
-            id="message"
+          <input
+            type="text"
+            id="address"
             className="peer w-full mt-1 p-2 border-b border-gray-900 focus:outline-none focus:border-green-500"
             placeholder=" "
           />
           <label
-            htmlFor="message"
-            className="absolute left-0 top-1 text-black text-sm transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-base peer-placeholder-shown:text-black peer-focus:top-1 peer-focus:text-sm peer-focus:text-green-500"
+            htmlFor="address"
+            className="absolute left-0 top-1 text-gray-700 text-sm transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-900 peer-focus:top-1 peer-focus:text-sm peer-focus:text-green-500"
           >
-            Comment Your Message
+            Address
+          </label>
+        </div>
+
+        <div className="flex justify-between space-x-4">
+          <div className="relative w-1/2">
+            <input
+              type="text"
+              id="country"
+              className="peer w-full mt-1 p-2 border-b border-gray-900 focus:outline-none focus:border-green-500"
+              placeholder=" "
+            />
+            <label
+              htmlFor="country"
+              className="absolute left-0 top-1 text-gray-700 text-sm transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-900 peer-focus:top-1 peer-focus:text-sm peer-focus:text-green-500"
+            >
+              Country
+            </label>
+          </div>
+
+          <div className="relative w-1/2">
+            <input
+              type="text"
+              id="state"
+              className="peer w-full mt-1 p-2 border-b border-gray-900 focus:outline-none focus:border-green-500"
+              placeholder=" "
+            />
+            <label
+              htmlFor="state"
+              className="absolute left-0 top-1 text-gray-700 text-sm transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-900 peer-focus:top-1 peer-focus:text-sm peer-focus:text-green-500"
+            >
+              State
+            </label>
+          </div>
+        </div>
+
+        <div className="relative">
+          <input
+            type="text"
+            id="invoiceNumber"
+            className="peer w-full mt-1 p-2 border-b border-gray-900 focus:outline-none focus:border-green-500"
+            placeholder=" "
+          />
+          <label
+            htmlFor="invoiceNumber"
+            className="absolute left-0 top-1 text-gray-700 text-sm transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-900 peer-focus:top-1 peer-focus:text-sm peer-focus:text-green-500"
+          >
+            Invoice Number
+          </label>
+        </div>
+
+        <div className="flex justify-between space-x-4">
+          <div className="relative w-1/2">
+            <input
+              type="text"
+              id="city"
+              className="peer w-full mt-1 p-2 border-b border-gray-900 focus:outline-none focus:border-green-500"
+              placeholder=" "
+            />
+            <label
+              htmlFor="city"
+              className="absolute left-0 top-1 text-gray-700 text-sm transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-900 peer-focus:top-1 peer-focus:text-sm peer-focus:text-green-500"
+            >
+              City
+            </label>
+          </div>
+
+          <div className="relative w-1/2">
+            <input
+              type="text"
+              id="zipCode"
+              className="peer w-full mt-1 p-2 border-b border-gray-900 focus:outline-none focus:border-green-500"
+              placeholder=" "
+            />
+            <label
+              htmlFor="zipCode"
+              className="absolute left-0 top-1 text-gray-700 text-sm transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-900 peer-focus:top-1 peer-focus:text-sm peer-focus:text-green-500"
+            >
+              Zip Code
+            </label>
+          </div>
+        </div>
+
+        <div className="relative">
+          <input
+            type="date"
+            id="purchaseDate"
+            className="peer w-full mt-1 p-2 border-b border-gray-900 focus:outline-none focus:border-green-500"
+            placeholder=" "
+          />
+          <label
+            htmlFor="purchaseDate"
+            className="absolute left-0 top-1 text-gray-700 text-sm transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-900 peer-focus:top-1 peer-focus:text-sm peer-focus:text-green-500"
+          >
+            Date of Purchase
           </label>
         </div>
 
