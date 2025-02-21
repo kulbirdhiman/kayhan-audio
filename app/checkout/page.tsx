@@ -4,6 +4,9 @@ import { FaPaypal } from "react-icons/fa";
 import { IoCardOutline } from "react-icons/io5";
 import CheckoutForm from "@/components/CheckoutForm";
 import { FaShippingFast, FaTruck } from "react-icons/fa"; 
+import { CiDiscount1 } from "react-icons/ci";
+import { FaGift } from "react-icons/fa6";
+
 interface Address {
   id: number;
   firstName: string;
@@ -74,18 +77,24 @@ const CheckOut: React.FC = () => {
   };
 
   return (
+    <>
+        <div className="w-[82%] mx-auto">
+        <h1 className="text-xl my-4 font-semibold">
+          Shipping Address
+        </h1>
+        <div className="bg-gray-600 p-3 text-white rounded-md my-2 flex"> <CiDiscount1 className="text-lg mx-2" />Have a coupan ? click here to enter your code</div>
+        <div className="bg-gray-600 p-3 text-white rounded-md my-2 flex"><FaGift className="text-lg mx-2" /> Have a gift Card? click here to enter your code</div>
+        </div>
     <section className="flex flex-col md:flex-row gap-2 w-full md:w-[90%] justify-around mx-auto mt-3 text-black">
       {/* Shipping Address Section */}
       <div className="md:w-[50%] p-4 pb-4 rou border-none">
-        <h1 className="text-xl my-4 font-semibold">
-          Shipping Address
-          <button
+       
+        <button
             onClick={handleAddAddress}
             className="ml-2 text-blue-500 text-sm"
           >
             + Add Address
           </button>
-        </h1>
         {addresses.map((address, index) => (
           <div key={address.id} className="p-2 rounded shadow-sm bg-gray-50 text-xs mt-2s">
 <div className="bg-gray-50 p-2">
@@ -107,13 +116,13 @@ const CheckOut: React.FC = () => {
               </div>
               <div className="flex gap-1 font-bold text-xl">
                 <button
-                  className="text-teal-500 text-sm border-r-2 border-gray-500  px-2"
+                  className="text-gray-600 text-sm border-r-2 border-gray-500  px-2"
                   onClick={() => handleEditAddress(address)}
                 >
                   Edit
                 </button>
                 <button
-                  className="text-teal-500 text-sm"
+                  className="text-gray-600 text-sm"
                   onClick={() => handleDeleteAddress(index)}
                 >
                   Delete
@@ -217,6 +226,7 @@ const CheckOut: React.FC = () => {
         </div>
       )}
     </section>
+    </>
   );
 };
 

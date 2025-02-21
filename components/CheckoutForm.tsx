@@ -34,10 +34,10 @@ const CheckoutForm = () => {
 
         {/* Buttons */}
         <div className="flex space-x-3">
-          <button type="submit" className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">
+          <button type="submit" className="bg-blue-950 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
             Save Address
           </button>
-          <button type="button" className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition">
+          <button type="button" className="bg-black text-white px-4 py-2 rounded hover:bg-black-600 transition">
             Cancel
           </button>
         </div>
