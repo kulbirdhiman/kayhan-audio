@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { FaPaypal } from "react-icons/fa";
 import { IoCardOutline } from "react-icons/io5";
 import CheckoutForm from "@/components/CheckoutForm";
-
+import { FaShippingFast, FaTruck } from "react-icons/fa"; 
 interface Address {
   id: number;
   firstName: string;
@@ -126,40 +126,75 @@ const CheckOut: React.FC = () => {
       </div>
 
       {/* Order Summary Section */}
-      <div className="md:w-[30%] p-2 border rounded shadow-sm bg-white text-sm">
-        <h1 className="text-center text-lg font-semibold border-b pb-1">Your Order</h1>
-        <div className="py-1 border-b flex justify-between">
-          <p>Car Stereo - BMW 5 Series (2004-2010)</p>
-          <p className="font-semibold">$1,995.00</p>
-        </div>
-        <div className="py-1 border-b flex justify-between">
-          <p>Shipping</p>
-          <p className="font-semibold">$25</p>
-        </div>
-        <div className="py-1 border-b flex justify-between">
-          <p>Discount</p>
-          <p className="font-semibold">$25</p>
-        </div>
-        <div className="py-2 flex justify-between font-bold text-lg">
-          <p>Total</p>
-          <p>$2,000</p>
-        </div>
-        <div className="text-xs text-gray-600 my-1">
-          Your personal data will be used to process your order as per our privacy policy.
-        </div>
-        <div className="flex items-center text-xs my-1">
-          <input type="checkbox" id="terms" className="mr-1 accent-black" />
-          <label htmlFor="terms">I agree to the terms & conditions</label>
-        </div>
-        <div className="flex flex-col gap-1">
-          <button className="bg-yellow-500 text-white px-3 py-2 rounded w-full flex items-center justify-center">
-            <FaPaypal className="mr-2" /> Pay with Paypal
-          </button>
-          <button className="bg-black text-white px-3 py-2 rounded w-full flex items-center justify-center">
-            <IoCardOutline className="mr-2" /> Pay with Debit Card
-          </button>
+      <div className="w-full md:w-[30%] my-4 p-6 border border-gray-300 rounded-lg shadow-md bg-white">
+  <h1 className="text-center text-2xl font-semibold border-b pb-3">Order Summary</h1>
+
+  {/* Product Details */}
+  <div className="py-4 border-b text-sm">
+    <div className="flex justify-between items-start">
+      <div className="w-[70%]">
+        <h2 className="text-lg font-semibold">Product</h2>
+        <p className="text-gray-700">Car Stereo with SatNav BMW 5 Series (2004 - 2010) | V6 | 8.8 Inch</p>
+      </div>
+      <div>
+        <h2 className="text-lg font-semibold">Subtotal</h2>
+        <p className="font-medium">$1,995.00</p>
+      </div>
+    </div>
+  </div>
+
+  {/* Shipping */}
+  <div className="py-4 border-b">
+    <h2 className="text-lg font-semibold">Shipping</h2>
+    <div className="flex justify-between w-full mt-2">
+      {/* Standard Delivery */}
+      <div className="flex items-center gap-2 p-3 border rounded-md cursor-pointer hover:bg-gray-100">
+        <FaTruck className="text-blue-500 text-xl" />
+        <div>
+          <h3 className="font-medium">Standard Delivery</h3>
+          <p className="text-xs text-gray-600">4-7 days</p>
         </div>
       </div>
+      {/* Fast Delivery */}
+      <div className="flex items-center gap-2 p-3 border rounded-md cursor-pointer hover:bg-gray-100">
+        <FaShippingFast className="text-red-500 text-xl" />
+        <div>
+          <h3 className="font-medium">Fast Delivery</h3>
+          <p className="text-xs text-gray-600">1-2 days</p>
+        </div>
+      </div>
+    </div>
+    {/* <p className="font-medium mt-3">$25</p> */}
+  </div>
+
+  {/* Total */}
+  <div className="my-3 flex justify-between text-lg font-bold">
+    <h2>Total</h2>
+    <h2>$2,000</h2>
+  </div>
+
+  {/* Terms & Conditions */}
+  <p className="text-sm text-gray-600">
+    By placing an order, you agree to our{" "}
+    <a href="#" className="text-blue-500 hover:underline">terms & conditions</a>.
+  </p>
+  <div className="flex items-center my-2 text-xs">
+    <input type="checkbox" id="terms" className="mr-2 accent-black" />
+    <label htmlFor="terms">I have read and agree to the website terms</label>
+  </div>
+
+  {/* Payment Buttons */}
+  <div className="flex flex-col gap-3 mt-4">
+    <button className="bg-yellow-500 text-white flex items-center justify-center px-4 py-2 rounded-md shadow-md hover:bg-yellow-600">
+      <FaPaypal className="mr-2" /> Pay with PayPal
+    </button>
+    <button className="bg-black text-white flex items-center justify-center px-4 py-2 rounded-md shadow-md hover:bg-gray-900">
+      <IoCardOutline className="mr-2" /> Pay with Debit Card
+    </button>
+  </div>
+</div>
+
+
 
       {/* Address Modal */}
       {showModal && (
@@ -169,8 +204,8 @@ const CheckOut: React.FC = () => {
               {editingAddress ? "Update Address" : "Add Address"}
             </h2>
             <CheckoutForm
-              initialAddress={editingAddress}
-              onSave={handleSaveAddress}
+              // initialAddress={editingAddress}
+              // onSave={handleSaveAddress}
             />
             <button
               onClick={() => setShowModal(false)}
