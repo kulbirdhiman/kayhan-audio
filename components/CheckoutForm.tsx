@@ -23,7 +23,7 @@ const CheckoutForm = () => {
         <div className="flex space-x-4">
           <input type="text" placeholder="City" className="border p-2 w-1/2 rounded" />
           <input type="text" placeholder="State" className="border p-2 w-1/2 rounded" />
-        </div>
+        </div> 
 
         <div className="flex space-x-4">
           <input type="text" placeholder="Pin Code" className="border p-2 w-1/2 rounded" />
